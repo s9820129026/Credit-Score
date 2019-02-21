@@ -11,3 +11,5 @@ Before Running the APP , Provide the User Identification Key in EQUIFAX API ,oth
 
 
 This Application is totally usefull for Lending Platforms who can Check and verify the credit health of an individual and based on data points lend them.
+
+PL : I have removed all the css ,so focus on Backend codes and functionalities.
