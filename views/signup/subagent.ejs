@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Verify</title>
+<!-- Font Icon -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="csslogin/style.css">
+</head>
+<body >
+  <header class="theme-main-header" style="background-color:rgba(19, 35, 47,1); ">
+    <div class="container">
+<a href="/home" class="logo float-left tran4s"><h3 style="color: white;">udhaarsudhaar</h3></a>
+</div>
+        </nav>
+      </div>
+    </header>
+
+  
+
+    
+<% if (errors.length > 0) { %>
+      <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismmiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <%= errors %>
+      </div>
+    <% } %>
+
+    
+        <div class="container">
+            <div class="form" style="margin-top: 100px;">
+                <div id="login">
+                    <h2 class="form-title">Sign up</h2>
+                    <form method="POST" action="/sub-agent%20signup-agent%20rights" class="register-form" id="register-form">
+                      <div class="field-wrap">
+                        <!-- <label><i class="zmdi zmdi-account material-icons-name"></i></label> -->
+                      <select style="color: black; width: 500px; font-size: 17px;" class="form-control" id="Agent_type" name="Agent_type" placeholder="Agent Type">
+                								<option value="Individual">Individual</option>
+                								<option value="Corporate">Corporate</option>
+                      </select>
+                      </div>
+
+                        <div class="field-wrap">
+                            <label >Name</label>
+                            <input type="text" name="name" id="name"  name="name"/>
+                        </div>
+
+
+                        <div class="field-wrap">
+                            <label>Number</label>
+                            <input type="number" name="number" id="name"/>
+                        </div>
+
+
+                        <div class="field-wrap">
+                            <!-- <label><i class="zmdi zmdi-account material-icons-name"></i></label> -->
+                            <select style="color: black; width: 500px; font-size: 17px;" class="form-control" id="gender" name="gender">
+                      								<option value="Male" selected="selected">Male</option>
+                      								<option value="Female">Female</option>
+                                      <option value="Others">Others</option>
+                            </select>
+                        </div>
+
+                        <label>Location</label>
+                        <div class="field-wrap">
+                            
+                            <input type="text" name="location" id="name" />
+                        </div>
+
+
+                        <div class="field-wrap">
+                            <label>Email</label>
+                            <input type="email" id="email" name="email"/>
+                        </div>
+
+
+                       <div class="field-wrap">
+                            <label>Password</label>
+                            <input type="password" id="password1" name="password1"/>
+                        </div>
+
+
+                        <div class="field-wrap">
+                            <label>Confirm Password</label>
+                            <input type="password" id="password2"/>
+                        </div>
+
+
+                        <div class="field-wrap">
+                            
+                            <input type="text" id="role" name="role" value="Sub-Agent"/>
+                        </div>
+                        <button type="submit" class="button button-block" style="margin:20px;" onclick="validate()">Submit</button>
+
+                    </form>
+                </div>
+                
+                   
+            </div>
+        </div>
+    
+ <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="js/main.js"></script>
+
+
+
+
+
+
+<script type = "text/javascript">
+				 function validate(){
+					 var password = document.getElementById("password1").value;
+					 var confirmpassword = document.getElementById("password2").value;
+					 if (password != confirmpassword) {
+						 alert("Check the password again pal");
+						 return false;
+					 }
+					 return true;
+
+				 }
+				 </script>
+       </body>
+       </html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+        <form action="/index47" id="equifaxForm" method="post">
+            
+            <div class="table-responsive">
+                <h3>EQUIFAX Details</h3>
+                <table class="table table-bordered table-striped table-highlight">
+                    <thead>
+                        <th>Fields</th>
+                        <th>Users data</th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                FirstName
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" required name="firstName" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                LastName
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" required name="lastname" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Date of birth
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="datepicker"required name="dob" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Pancard
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" required name="panId" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Mobile No.
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" required name="mobNumber" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Address
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" required name="address" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                State
+                            </td>
+                            <td>
+                                <select class="form-control" name="state">
+                                    <option value="AN">Andaman & Nicobar Islands</option>
+                                    <option value="AP">Andhra Pradesh</option>
+                                    <option value="AR">Arunachal Pradesh</option>
+                                    <option value="AS">Assam</option>
+                                    <option value="BR">Bihar</option>
+                                    <option value="CH">Chandigarh</option>
+                                    <option value="CG">Chhattisgarh</option>
+                                    <option value="DN">Dadra & Nagar Haveli</option>
+                                    <option value="DD">Daman & Diu</option>
+                                    <option value="DL">Delhi</option>
+                                    <option value="GA">Goa</option>
+                                    <option value="GJ">Gujarat</option>
+                                    <option value="HR">Haryana</option>
+                                    <option value="HP">Himachal Pradesh</option>
+                                    <option value="JK">Jammu & Kashmir</option>
+                                    <option value="JH">Jharkhand</option>
+                                    <option value="KA">Karnataka</option>
+                                    <option value="KL">Kerala</option>
+                                    <option value="LD">Lakshadweep</option>
+                                    <option value="MP">Madhya Pradesh</option>
+                                    <option value="MH">Maharashtra</option>
+                                    <option value="MN">Manipur</option>
+                                    <option value="ML">Meghalaya</option>
+                                    <option value="MZ">Mizoram</option>
+                                    <option value="NL">Nagaland</option>
+                                    <option value="OR">Orissa</option>
+                                    <option value="PY">Pondicherry/Puducherry</option>
+                                    <option value="PB">Punjab</option>
+                                    <option value="RJ">Rajasthan</option>
+                                    <option value="SK">Sikkim</option>
+                                    <option value="TN">Tamil Nadu</option>
+                                    <option value="TR">Tripura</option>
+                                    <option value="UP">Uttar Pradesh</option>
+                                    <option value="UL">Uttaranchal/Uttarakhand</option>
+                                    <option value="WB">West Bengal</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Postal
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" required name="pincode" />
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <button type="submit" class="btn" name="Submit" style="margin-bottom: 20px;">Submit Form</button>
+        </form>
+        
+    </div>
+    
+    <script>
+        $(function() {
+            var start = new Date();
+            start.setFullYear(start.getFullYear() - 100);
+            var end = new Date();
+            end.setFullYear(end.getFullYear());
+            $("#datepicker" ).datepicker({
+                changeYear: true,
+                yearRange: "1900:2012",
+                dateFormat: 'yy-mm-dd',
+                minDate: start,
+                maxDate: end,
+                yearRange: start.getFullYear() + ':' + end.getFullYear()
+            });
+        });
+        
+       
+    </script>
+</body>
+
+</html>
